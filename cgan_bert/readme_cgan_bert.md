@@ -1,1 +1,58 @@
+# Conditional GAN for Text-to-Image Synthesis
+
+This project implements a Conditional Generative Adversarial Network (GAN) to generate images based on textual descriptions. The model uses a pre-trained BERT model for text encoding and a deep convolutional neural network for the generator and discriminator.
+
+## Table of Contents
+
+- [Dataset](#dataset)
+- [Model Architecture](#model-architecture)
+- [Dependencies](#dependencies)
+- [Setup](#setup)
+- [Training the Model](#training-the-model)
+- [Results](#results)
+- [Future Work](#future-work)
+- [Acknowledgements](#acknowledgements)
+
+## Dataset
+
+The model is trained on the COCO dataset, specifically the `train2017` subset along with its annotations. The COCO dataset contains images with corresponding textual descriptions (captions).
+
+- **Image Directory:** The directory containing the training images.
+- **Annotations File:** JSON file containing image captions.
+
+## Model Architecture
+
+### Text Encoder
+
+- **BERT-Based Text Encoder:** Uses a pre-trained BERT model to convert text descriptions into feature vectors.
+
+### Generator
+
+- **Input:** Concatenates noise vector and text embedding.
+- **Architecture:**
+  - Fully Connected Layer
+  - Three Transposed Convolutional (Deconvolutional) Layers
+  - ReLU activations followed by Tanh activation
+
+### Discriminator
+
+- **Input:** Takes an image and a text embedding.
+- **Architecture:**
+  - Three Convolutional Layers
+  - LeakyReLU activations
+  - Fully Connected Layer
+  - Sigmoid activation
+
+## Dependencies
+
+- Python 3.x
+- PyTorch
+- torchvision
+- transformers (Hugging Face)
+- Pillow
+- matplotlib
+- numpy
+- json
+
+
 
