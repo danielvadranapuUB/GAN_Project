@@ -87,3 +87,13 @@ The model is trained on the COCO dataset, specifically the `train2017` subset al
 ![](overleaf_files/test4_stitched_image.png)
 
 ![Model Loss](overleaf_files/test4_plots.png)
+
+# Image to Image Generation on Animal Face Dataset
+
+* run cgan_afhq.ipynb 
+
+## Results
+
+![](overleaf_files/cgan_loss.png)
+
+![](overleaf_files/cat.png)
