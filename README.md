@@ -1,11 +1,33 @@
 # Final Project Instructions to run the Code
 
 In this project we implemented 3 models.
+* Pre-trained LDM Model
 * cGAN using AFHQ dataset
 * cGAN BERT model usiing COCO dataset
-* Pre-trained LDM Model
 
-# 1. cGAN using AFHQ dataset
+
+# 1. Pretrained LDM Model
+
+## Dependencies 
+
+```cmd
+pip install transformers==4.19.2 scann kornia==0.6.4 torchmetrics==0.6.0
+pip install git+https://github.com/arogozhnikov/einops.git
+```
+
+## Running LDM Script
+
+The file contains all the code that is necessary to run the model. It doesnt require additional file
+
+* Load the code in colab and run Inferencing_LDM.ipynb cells 
+
+## Results using LDM model
+
+![](overleaf_files/a_happy_bear.png)
+
+![](overleaf_files/a_happy_beer.png)
+
+# 2. cGAN using AFHQ dataset
 * run cgan_afhq.ipynb 
 
 ## Dataset 
@@ -19,7 +41,7 @@ Dataset can be downloaded from below menioned link
 ![](overleaf_files/cat.png)
 
 
-# 2. cGAN BERT model using COCO dataset
+# 3. cGAN BERT model using COCO dataset
 This project implements a Conditional Generative Adversarial Network (GAN) to generate images based on textual descriptions. The model uses a pre-trained BERT model for text encoding and a deep convolutional neural network for the generator and discriminator.
 
 ## Dataset
@@ -95,25 +117,6 @@ Make sure to change the path of COCO dataset if you are running cgan_ber.ipynb. 
 * Python3.8 is required to run the LDM repository
 * COCO Dataset
 
-# 3. Pretrained LDM Model
 
-## Dependencies 
-
-```cmd
-pip install transformers==4.19.2 scann kornia==0.6.4 torchmetrics==0.6.0
-pip install git+https://github.com/arogozhnikov/einops.git
-```
-
-## Running LDM Script
-
-The file contains all the code that is necessary to run the model. It doesnt require additional file
-
-* Load the code in colab and run Inferencing_LDM.ipynb cells 
-
-## Results using LDM model
-
-![](overleaf_files/a_happy_bear.png)
-
-![](overleaf_files/a_happy_beer.png)
 
 
